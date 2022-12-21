@@ -1,0 +1,54 @@
+{% extends 'main\Base.html' %}
+
+{% block title %} Model {% endblock %}
+<body>
+    <aside>
+        <span></span>
+        <h3>Navigation</h3>
+        <ul class="menu">
+            <a href="{% url 'home' %}"><li><i class="fa-solid fa-graduation-cap"></i> Main</li></a>
+            <a href="{% url 'model' %}"><li><i class="fa-solid fa-archive"></i> Parser </li></a>
+            <a href="{% url 'contacts' %}"><li><i class="fa-solid fa-address-book"></i> Contacts</li></a>
+        </ul>
+    </aside>
+    <main>
+{% block content %} 
+<div class="content model">
+    <h1>Parser</h1>
+    <p class="parsing">Мы должны выбрать какой раздел нам интересен и сколько бы страниц мы хотели бы пропарсить</p>
+
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>ВВедите колличество страниц для парсинга</p>
+        <input type="number" name="count">
+        <p>Выберите категорию для парсинга</p>
+        <p><select name="list1">
+            <option>Выберите из списка</option>
+            <option value="Новинки">Новинки</option>
+
+            <option value="Одежда">Одежда</option>
+
+            <option value="Аксессуары">Аксессуары</option> 
+
+                <option value="Зима">Зима</option>
+           </select></p>
+          
+        <button type="submit">Обработать</button>
+    </form> 
+
+    <!-- {% if v %}
+        {% for el in answer %}
+            {% for name, value in el.items %}
+                <p>{{name}}: {{value}}</p>
+            {% endfor %}
+            <br>
+        {% endfor %}
+    {% endif %} -->
+
+    {% for el in answer %}
+            <p class="result">name: '{{el.name}}'; price: {{el.price_y_dis}}</p><br>
+    {% endfor %}
+
+</div>
+{% endblock %}

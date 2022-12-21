@@ -1,0 +1,101 @@
+body {
+    background: #f7f3f3;
+}
+
+aside {
+    float: center;
+    background: #88c5e9;
+    width: 20%;
+    height: 100vh;
+    padding: 2.5%;
+    border-left: 5px solid #746868;
+    color: #fff;
+}
+ul {
+    list-style: none;
+}
+
+aside ul a {
+    text-decoration: none;
+    /* color: #fff; */
+    color: rgb(224, 55, 13);
+    display: block;
+    margin-top: 20px;
+}
+
+aside ul li:hover {
+    /* color: rgb(213, 216, 14); */
+    color: rgb(0, 247, 255);
+    transform: scale(1.1);
+    transition: all 0.4s ease;
+}
+
+.content {
+    color: #fff;
+    align-items: center;
+}
+
+.content h1 {
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+}
+
+form {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.home {
+    float: left;
+    text-align: center;
+    margin-top: 60px;
+    width: 75%;
+}
+
+.home p {
+    /* width: 50%;
+    margin: auto; */
+    margin-top: 20px;
+    text-align: center;
+    padding: 0 80px;
+}
+
+.contacts {
+    float: left;
+    text-align: center;
+    margin-top: 60px;
+    width: 75%;
+}
+
+.contacts ul {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.contacts ul a {
+    margin-top: 6px;
+    text-decoration: none;
+    color: rgb(224, 13, 13);
+}
+
+.contacts ul a:hover {
+    color: rgb(255, 166, 0);
+    transition: all 0.4s ease;
+}
+
+
+.model {
+    float: left;
+    text-align: center;
+    margin-top: 60px;
+    width: 75%;
+}
+
+.model p {
+    margin-top: 20px;
+    text-align: center;
+    padding: 0 80px;
+}
